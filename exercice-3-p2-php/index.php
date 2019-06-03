@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Exercice 3 PHP</title>
+  </head>
+  <body>
+    <div class="container p-0">
+      <header>
+        <div class="row mb-4 p-4 bg-primary d-flex justify-content-center align-item-center">
+          <h1 class="text-white m-2">Exercice 3</h1>
+          <h4 class="text-white m-4 text-center">Créer deux variables age et gender. La variable gender peut prendre comme valeur :
+
+                                                    Homme
+                                                    Femme
+
+                                                En fonction de l'âge et du genre afficher la phrase correspondante :
+
+                                                    Vous êtes un homme et vous êtes majeur
+                                                    Vous êtes un homme et vous êtes mineur
+                                                    Vous êtes une femme et vous êtes majeur
+                                                    Vous êtes une femme et vous êtes mineur
+
+                                                Gérer tous les cas.</h4>
+        </div>
+      </header>
+      <p class="text-center">
+        <?php
+          $age = rand(1, 99);
+          $gender = 'homme';
+          if ($age >= 18 && $gender == 'homme') {
+            echo 'Vous êtes un homme et vous êtes majeur';
+          } else if ($age >= 18 && $gender == 'femme') {
+            echo 'Vous êtes une femme et vous êtes majeur';
+          } else if ($age < 18 && $gender == 'homme'){
+            echo 'Vous êtes un homme et vous êtes mineur';
+          } else {
+            echo 'Vous êtes une femme et vous êtes mineur';
+          }
+        ?>
+      </p>
+    </div>
+  </body>
+</html>
